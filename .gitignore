@@ -16,3 +16,6 @@ data_*/
 # Tests
 tests/results.xml
 tests/metadata.json
+
+# Build
+Builds/
