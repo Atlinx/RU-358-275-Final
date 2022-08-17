@@ -11,6 +11,7 @@ name: 'Publish to GitHub Pages'
 
 env:
   GODOT_VERSION: 3.5 # Remember to manually set image to this version below.
+  IMPORT_TIME: 10s
 
 on:
   workflow_dispatch:
@@ -39,6 +40,9 @@ jobs:
 
       - name: Compile
         run: msbuild
+
+      - name: Reimport Assets
+        run: timeout $IMPORT_TIME godot --editor || code=$?; if [[ $code -ne 124 && $code -ne 0 ]]; then exit $code; fi
 
       - name: Move HTML5 templates into position
         run: |

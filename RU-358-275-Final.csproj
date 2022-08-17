@@ -1,0 +1,9 @@
+<Project Sdk="Godot.NET.Sdk/3.3.0">
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <RootNamespace>RU358275Final</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="GodotOnReady" Version="1.2.2" />
+  </ItemGroup>
+</Project>

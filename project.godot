@@ -16,13 +16,13 @@ ResourceScriptDirectories=[ "res://" ]
 
 [application]
 
-config/name="History Of Native American Gender"
+config/name="RU-358-275-Final"
 run/main_scene="res://Scenes/Gallery.tscn"
 config/icon="res://icon.png"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/FracturalCommons/plugin.cfg", "res://addons/MonoCustomResourceRegistry/plugin.cfg" )
+enabled=PoolStringArray(  )
 
 [global]
 
