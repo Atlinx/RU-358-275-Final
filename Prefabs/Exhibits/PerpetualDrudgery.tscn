@@ -1,0 +1,98 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Prefabs/Exhibit.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Fonts/theme.tres" type="Theme" id=2]
+[ext_resource path="res://Fonts/urbanist-title.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Art/Farming.jpg" type="Texture" id=4]
+[ext_resource path="res://Art/Jefferson.jpg" type="Texture" id=5]
+
+[node name="Perpetual Drudgery\?" instance=ExtResource( 1 )]
+canvasLayerPaths = [ NodePath("ParallaxBackground/ParallaxLayer/CanvasLayer") ]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" index="0"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="ParallaxBackground/ParallaxLayer" index="0"]
+follow_viewport_enable = true
+
+[node name="Node" type="VBoxContainer" parent="ParallaxBackground/ParallaxLayer/CanvasLayer" index="0"]
+margin_left = -480.0
+margin_top = -173.0
+margin_right = 20.0
+margin_bottom = 393.0
+rect_min_size = Vector2( 500, 300 )
+theme = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="ParallaxBackground/ParallaxLayer/CanvasLayer/Node" index="0"]
+margin_right = 500.0
+margin_bottom = 37.0
+custom_fonts/font = ExtResource( 3 )
+text = "Perpetual Drudgery?"
+align = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ParallaxBackground/ParallaxLayer/CanvasLayer/Node" index="1"]
+margin_top = 41.0
+margin_right = 500.0
+margin_bottom = 566.0
+mouse_filter = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+bbcode_text = "A shared belief amongst many Europeans and Americans was that the distribution of labor in Native American culture subjugated women to \"drudgery\"
+
+For example in Fuller's text, she expresses she viewed native women as  [b]\"banished by perpetual drugery ... and other slavish employments considered beneath the dignity of the [native] men\"[/b] (Fuller 117). Even Thomas Jefferson -- generations before Fuller -- shared this stance, saying [b]\"The women are submitted to unjust drudgery. This I believe is the case with every barbarous people. With such, force is law. The stronger sex therefore imposes on the weaker\"[/b] (qtd. in Rifkin 45).
+
+Yet this is inherently from a Eurocentric view -- from a their perspective, hunting is done for recreation, while agriculture is done for sustenance (Reed 71). And it doesn't help that decades of colonialism pushed for the a binary categorization of natives. As Driskill mentioned,  the chroniclers of De Soto, a spanish conquistador, \"[needed] to characterize Indigenous nations in the Southeast as either savage—and thus needing to be contained by Spanish imperialism—or noble, and thus willing to concede power to the Spanish and aid them in their colonial project\" (58). This meant natives were either depicts as welcoming of European tradition, or as \"savage\" -- \"barbarous\" in Jefferson's words -- that must be tamed by \"imperialism.\""
+text = "A shared belief amongst many Europeans and Americans was that the distribution of labor in Native American culture subjugated women to \"drudgery\"
+
+For example in Fuller's text, she expresses she viewed native women as  \"banished by perpetual drugery ... and other slavish employments considered beneath the dignity of the [native] men\" (Fuller 117). Even Thomas Jefferson -- generations before Fuller -- shared this stance, saying \"The women are submitted to unjust drudgery. This I believe is the case with every barbarous people. With such, force is law. The stronger sex therefore imposes on the weaker\" (qtd. in Rifkin 45).
+
+Yet this is inherently from a Eurocentric view -- from a their perspective, hunting is done for recreation, while agriculture is done for sustenance (Reed 71). And it doesn't help that decades of colonialism pushed for the a binary categorization of natives. As Driskill mentioned,  the chroniclers of De Soto, a spanish conquistador, \"[needed] to characterize Indigenous nations in the Southeast as either savage—and thus needing to be contained by Spanish imperialism—or noble, and thus willing to concede power to the Spanish and aid them in their colonial project\" (58). This meant natives were either depicts as welcoming of European tradition, or as \"savage\" -- \"barbarous\" in Jefferson's words -- that must be tamed by \"imperialism.\""
+fit_content_height = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ParallaxBackground/ParallaxLayer/CanvasLayer" index="1"]
+margin_left = 37.0
+margin_top = -169.0
+margin_right = 437.0
+margin_bottom = 431.0
+rect_min_size = Vector2( 350, 600 )
+theme = ExtResource( 2 )
+custom_constants/separation = 24
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="ParallaxBackground/ParallaxLayer/CanvasLayer/VBoxContainer" index="0"]
+margin_right = 408.0
+margin_bottom = 288.0
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground/ParallaxLayer/CanvasLayer/VBoxContainer/VBoxContainer2" index="0"]
+margin_right = 408.0
+margin_bottom = 256.0
+size_flags_vertical = 3
+texture = ExtResource( 4 )
+expand = true
+stretch_mode = 7
+
+[node name="Label" type="Label" parent="ParallaxBackground/ParallaxLayer/CanvasLayer/VBoxContainer/VBoxContainer2" index="1"]
+margin_top = 260.0
+margin_right = 408.0
+margin_bottom = 288.0
+text = "Indigenous women plowing fields was seen as drudgery."
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ParallaxBackground/ParallaxLayer/CanvasLayer/VBoxContainer" index="1"]
+margin_top = 312.0
+margin_right = 408.0
+margin_bottom = 600.0
+size_flags_vertical = 3
+
+[node name="Jefferson" type="TextureRect" parent="ParallaxBackground/ParallaxLayer/CanvasLayer/VBoxContainer/VBoxContainer" index="0"]
+margin_right = 408.0
+margin_bottom = 233.0
+size_flags_vertical = 3
+texture = ExtResource( 5 )
+expand = true
+stretch_mode = 7
+
+[node name="Label2" type="Label" parent="ParallaxBackground/ParallaxLayer/CanvasLayer/VBoxContainer/VBoxContainer" index="1"]
+margin_top = 237.0
+margin_right = 408.0
+margin_bottom = 288.0
+text = "Jefferson himself shared the same beliefs of the subjugation of women within native cultures."
+autowrap = true

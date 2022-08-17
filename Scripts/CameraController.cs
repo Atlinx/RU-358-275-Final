@@ -65,20 +65,20 @@ public partial class CameraController : Camera2D
                     Position -= mouseDelta * Zoom;
                 }
             }
-            else if (!Input.IsMouseButtonPressed((int)ButtonList.Left))
-            {
-                panning = false;
-            }
             else
             {
-                // WASD movement
-                if (Input.IsActionPressed("left")) dir.x -= 1;
-                if (Input.IsActionPressed("right")) dir.x += 1;
-                if (Input.IsActionPressed("up")) dir.y -= 1;
-                if (Input.IsActionPressed("down")) dir.y += 1;
-                Direction = dir.Normalized();
+                if (panning) panning = false;
+                if (!Input.IsMouseButtonPressed((int)ButtonList.Left))
+                {
+                    // WASD movement
+                    if (Input.IsActionPressed("left")) dir.x -= 1;
+                    if (Input.IsActionPressed("right")) dir.x += 1;
+                    if (Input.IsActionPressed("up")) dir.y -= 1;
+                    if (Input.IsActionPressed("down")) dir.y += 1;
+                    Direction = dir.Normalized();
 
-                Position += dir * Speed;
+                    Position += dir * Speed;
+                }
             }
 
             if (Input.IsActionJustReleased("zoom_in"))

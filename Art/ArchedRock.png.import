@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/NodeMask.png-c71bd2c6e84c8c15edb2b4ebe9906862.stex"
+path="res://.import/ArchedRock.png-eab88e21a217b815c6cc1bbb4013d960.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/NodeMask.png"
-dest_files=[ "res://.import/NodeMask.png-c71bd2c6e84c8c15edb2b4ebe9906862.stex" ]
+source_file="res://Art/ArchedRock.png"
+dest_files=[ "res://.import/ArchedRock.png-eab88e21a217b815c6cc1bbb4013d960.stex" ]
 
 [params]
 
