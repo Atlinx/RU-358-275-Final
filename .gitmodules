@@ -2,3 +2,7 @@
 	path = addons/FracturalCommons
 	url = https://github.com/Fractural/FracturalCommons.git
 	branch = release
+[submodule "addons/GodotVisualStudioStub"]
+	path = addons/GodotVisualStudioStub
+	url = https://github.com/Fractural/GodotVisualStudioStub.git
+	branch = release
