@@ -37,6 +37,9 @@ public partial class CameraController : Camera2D
     [OnReadyGet]
     private Tween zoomTween;
 
+    private bool panning;
+    private Vector2 prevMousePos;
+
     [OnReady]
     private void RealReady()
     {
@@ -48,13 +51,35 @@ public partial class CameraController : Camera2D
         var dir = Vector2.Zero;
         if (!visitTween.IsActive() && CanMove)
         {
-            if (Input.IsActionPressed("left")) dir.x -= 1;
-            if (Input.IsActionPressed("right")) dir.x += 1;
-            if (Input.IsActionPressed("up")) dir.y -= 1;
-            if (Input.IsActionPressed("down")) dir.y += 1;
-            Direction = dir.Normalized();
+            if (Input.IsMouseButtonPressed((int)ButtonList.Left))
+            {
+                // Mouse movement
+                if (!panning)
+                {
+                    prevMousePos = GetGlobalMousePosition();
+                    panning = true;
+                }
+                else
+                {
+                    Vector2 mouseDelta = GetGlobalMousePosition() - prevMousePos;
+                    Position -= mouseDelta * Zoom;
+                }
+            }
+            else if (!Input.IsMouseButtonPressed((int)ButtonList.Left))
+            {
+                panning = false;
+            }
+            else
+            {
+                // WASD movement
+                if (Input.IsActionPressed("left")) dir.x -= 1;
+                if (Input.IsActionPressed("right")) dir.x += 1;
+                if (Input.IsActionPressed("up")) dir.y -= 1;
+                if (Input.IsActionPressed("down")) dir.y += 1;
+                Direction = dir.Normalized();
 
-            Position += dir * Speed;
+                Position += dir * Speed;
+            }
 
             if (Input.IsActionJustReleased("zoom_in"))
                 ZoomLevel -= ZoomFactor;

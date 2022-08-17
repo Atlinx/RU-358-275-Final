@@ -4,3 +4,9 @@ C:\Users\Alan\Documents\Godot\Projects\History Of Native American Gender\addons\
 C:\Users\Alan\Documents\Godot\Projects\History Of Native American Gender\addons\GodotVisualStudioStub\obj\Debug\StubProject.csproj.CoreCompileInputs.cache
 C:\Users\Alan\Documents\Godot\Projects\History Of Native American Gender\addons\GodotVisualStudioStub\obj\Debug\StubProj.dll
 C:\Users\Alan\Documents\Godot\Projects\History Of Native American Gender\addons\GodotVisualStudioStub\obj\Debug\StubProj.pdb
+C:\Users\Alan\Documents\Godot\Projects\RU-358-275-Final\addons\GodotVisualStudioStub\bin\Debug\StubProj.dll
+C:\Users\Alan\Documents\Godot\Projects\RU-358-275-Final\addons\GodotVisualStudioStub\bin\Debug\StubProj.pdb
+C:\Users\Alan\Documents\Godot\Projects\RU-358-275-Final\addons\GodotVisualStudioStub\obj\Debug\StubProject.csproj.AssemblyReference.cache
+C:\Users\Alan\Documents\Godot\Projects\RU-358-275-Final\addons\GodotVisualStudioStub\obj\Debug\StubProject.csproj.CoreCompileInputs.cache
+C:\Users\Alan\Documents\Godot\Projects\RU-358-275-Final\addons\GodotVisualStudioStub\obj\Debug\StubProj.dll
+C:\Users\Alan\Documents\Godot\Projects\RU-358-275-Final\addons\GodotVisualStudioStub\obj\Debug\StubProj.pdb

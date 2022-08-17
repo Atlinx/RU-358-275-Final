@@ -2,6 +2,7 @@
 using Godot;
 using GodotOnReady.Attributes;
 
+[Tool]
 public partial class VisitExhibit : Area2D
 {
     public event Action VisitedExhibit;
