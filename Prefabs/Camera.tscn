@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/CameraController.cs" type="Script" id=1]
+
+[node name="Camera2D" type="Camera2D"]
+current = true
+script = ExtResource( 1 )
+Speed = 5.0
+MinZoom = 0.5
+MaxZoom = 2.0
+ZoomLevel = 1.0
+VisitTweenPath = NodePath("VisitTween")
+ZoomTweenPath = NodePath("ZoomTween")
+ZoomFactor = 0.1
+ZoomDuration = 0.25
+
+[node name="VisitTween" type="Tween" parent="."]
+
+[node name="ZoomTween" type="Tween" parent="."]

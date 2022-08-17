@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32516.85
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "History Of Native American Gender", "History Of Native American Gender.csproj", "{FC27C860-FF85-44A9-B378-9E7002B6FA8D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StubProj", "..\..\..\..\Desktop\Open_Source\Fall2022Workshops\Godot2DShooter\StubProj\StubProj.csproj", "{B83A5A30-7D9A-4BCC-BB56-2974A2AAE767}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		ExportDebug|Any CPU = ExportDebug|Any CPU
+		ExportRelease|Any CPU = ExportRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FC27C860-FF85-44A9-B378-9E7002B6FA8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC27C860-FF85-44A9-B378-9E7002B6FA8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC27C860-FF85-44A9-B378-9E7002B6FA8D}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{FC27C860-FF85-44A9-B378-9E7002B6FA8D}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{FC27C860-FF85-44A9-B378-9E7002B6FA8D}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{FC27C860-FF85-44A9-B378-9E7002B6FA8D}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+		{B83A5A30-7D9A-4BCC-BB56-2974A2AAE767}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B83A5A30-7D9A-4BCC-BB56-2974A2AAE767}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B83A5A30-7D9A-4BCC-BB56-2974A2AAE767}.ExportDebug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B83A5A30-7D9A-4BCC-BB56-2974A2AAE767}.ExportDebug|Any CPU.Build.0 = Debug|Any CPU
+		{B83A5A30-7D9A-4BCC-BB56-2974A2AAE767}.ExportRelease|Any CPU.ActiveCfg = Debug|Any CPU
+		{B83A5A30-7D9A-4BCC-BB56-2974A2AAE767}.ExportRelease|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9CBCD4A1-D3E1-4168-8402-FBDBF8BAC8BB}
+	EndGlobalSection
+EndGlobal
