@@ -1,0 +1,109 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Fonts/urbanist-title.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Prefabs/Exhibit.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Fonts/theme.tres" type="Theme" id=3]
+[ext_resource path="res://Art/Schoolcraft.png" type="Texture" id=4]
+[ext_resource path="res://Art/Ojibwe.jpg" type="Texture" id=5]
+
+[node name="Ojib-way Maid" instance=ExtResource( 2 )]
+canvasLayerPaths = [ NodePath("ParallaxBackground/ParallaxLayer/CanvasLayer") ]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" index="0"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="ParallaxBackground/ParallaxLayer" index="0"]
+follow_viewport_enable = true
+
+[node name="Control" type="HBoxContainer" parent="ParallaxBackground/ParallaxLayer/CanvasLayer" index="0"]
+margin_left = -224.0
+margin_top = -207.0
+margin_right = 491.0
+margin_bottom = 401.0
+theme = ExtResource( 3 )
+
+[node name="Node" type="VBoxContainer" parent="ParallaxBackground/ParallaxLayer/CanvasLayer/Control" index="0"]
+margin_right = 400.0
+margin_bottom = 608.0
+rect_min_size = Vector2( 400, 300 )
+theme = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="ParallaxBackground/ParallaxLayer/CanvasLayer/Control/Node" index="0"]
+margin_right = 400.0
+margin_bottom = 37.0
+custom_fonts/font = ExtResource( 1 )
+text = "Ojib-way Maid"
+align = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ParallaxBackground/ParallaxLayer/CanvasLayer/Control/Node" index="1"]
+margin_top = 41.0
+margin_right = 400.0
+margin_bottom = 608.0
+mouse_filter = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+bbcode_text = "Jane Johnston Schoolcraft was a Native American poet of the 19th century. She's Métis, meaning she's of Ojibwa and Scots-Irish descent, and her work has been published under the text \"The Sound the Stars Make Rushing Through the Sky.\" 
+
+Her poems highlighted the intersectional identity of being an Ojibwe woman. For example looking at \"The O-jib-way Maid,\" the literal translation is as follows
+
+[indent]Why! what's the matter with the young American? He crosses the river with tears in his eyes! He sees the young Ojibway Girl preparing to leave the place; he sobs for his sweetheart, because she is going away! but he will not sigh long for her, for as soon as he sees her out of sight, he will forget her.[/indent]
+
+This poem highlights the brevity of interracial relationships between Whites and Ojibwe people, and it draws from the history of white fur traders abandoning their Ojibwe wives when they no longer traded in the area. These experiences can ultimately shape Indigenous people's intepretation of gender, as Métis children raised by single Ojibwe mothers may internalize a stronger and more independent form of femininity than what was provided by mainstream Euramericans standards of the time."
+text = "Jane Johnston Schoolcraft was a Native American poet of the 19th century. She's Métis, meaning she's of Ojibwa and Scots-Irish descent, and her work has been published under the text \"The Sound the Stars Make Rushing Through the Sky.\" 
+
+Her poems highlighted the intersectional identity of being an Ojibwe woman. For example looking at \"The O-jib-way Maid,\" the literal translation is as follows
+
+	Why! what's the matter with the young American? He crosses the river with tears in his eyes! He sees the young Ojibway Girl preparing to leave the place; he sobs for his sweetheart, because she is going away! but he will not sigh long for her, for as soon as he sees her out of sight, he will forget her.
+
+This poem highlights the brevity of interracial relationships between Whites and Ojibwe people, and it draws from the history of white fur traders abandoning their Ojibwe wives when they no longer traded in the area. These experiences can ultimately shape Indigenous people's intepretation of gender, as Métis children raised by single Ojibwe mothers may internalize a stronger and more independent form of femininity than what was provided by mainstream Euramericans standards of the time."
+fit_content_height = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ParallaxBackground/ParallaxLayer/CanvasLayer/Control" index="1"]
+margin_left = 404.0
+margin_right = 604.0
+margin_bottom = 608.0
+rect_min_size = Vector2( 200, 0 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ParallaxBackground/ParallaxLayer/CanvasLayer/Control/VBoxContainer" index="0"]
+margin_right = 200.0
+margin_bottom = 302.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground/ParallaxLayer/CanvasLayer/Control/VBoxContainer/VBoxContainer" index="0"]
+margin_right = 200.0
+margin_bottom = 247.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 4 )
+expand = true
+stretch_mode = 7
+
+[node name="Label" type="Label" parent="ParallaxBackground/ParallaxLayer/CanvasLayer/Control/VBoxContainer/VBoxContainer" index="1"]
+margin_top = 251.0
+margin_right = 200.0
+margin_bottom = 302.0
+text = "Portrait of Jane Johnston Schoolcraft"
+autowrap = true
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="ParallaxBackground/ParallaxLayer/CanvasLayer/Control/VBoxContainer" index="1"]
+margin_top = 306.0
+margin_right = 200.0
+margin_bottom = 608.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground/ParallaxLayer/CanvasLayer/Control/VBoxContainer/VBoxContainer2" index="0"]
+margin_right = 200.0
+margin_bottom = 247.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 5 )
+expand = true
+stretch_mode = 7
+
+[node name="Label" type="Label" parent="ParallaxBackground/ParallaxLayer/CanvasLayer/Control/VBoxContainer/VBoxContainer2" index="1"]
+margin_top = 251.0
+margin_right = 200.0
+margin_bottom = 302.0
+text = "Ojibwe Woman, Ponemah, Minnesota, 1908"
+autowrap = true

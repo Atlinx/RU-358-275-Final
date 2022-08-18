@@ -39,14 +39,14 @@ bbcode_text = "We'wha is a Native American who was apart of the Zuni tribe. They
 
 In 1886, We'Wha travelled to Washington D.C. to help anthropologists James and Matilda Coxe Stevenson document indigenous cutlure. But more than anything, this was an opportunity for them to make a good impresion in front of Americas -- in hopes of stopping the ongoing abuses inflicted by American settlers. We'Wha formed a life long friendship with Matilda, and, their dying words to her were 
 
-[b]\"love all my people; protect them; they are your children; you are their mother.\"[/b]
+[indent][b]\"love all my people; protect them; they are your children; you are their mother.\"[/b][/indent]
 
 But they ultimately couldn't stop the tide of persecution. In 1890s, an Indian agent \"vowed to end the Zuni custom of men wearing female dresses.\""
 text = "We'wha is a Native American who was apart of the Zuni tribe. They identified as Ihamana, who were biological men that wore feminine clothing and performed the duties of both men and women. 
 
 In 1886, We'Wha travelled to Washington D.C. to help anthropologists James and Matilda Coxe Stevenson document indigenous cutlure. But more than anything, this was an opportunity for them to make a good impresion in front of Americas -- in hopes of stopping the ongoing abuses inflicted by American settlers. We'Wha formed a life long friendship with Matilda, and, their dying words to her were 
 
-\"love all my people; protect them; they are your children; you are their mother.\"
+	\"love all my people; protect them; they are your children; you are their mother.\"
 
 But they ultimately couldn't stop the tide of persecution. In 1890s, an Indian agent \"vowed to end the Zuni custom of men wearing female dresses.\""
 fit_content_height = true
