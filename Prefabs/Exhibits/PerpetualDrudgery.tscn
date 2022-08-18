@@ -14,22 +14,28 @@ canvasLayerPaths = [ NodePath("ParallaxBackground/ParallaxLayer/CanvasLayer") ]
 [node name="CanvasLayer" type="CanvasLayer" parent="ParallaxBackground/ParallaxLayer" index="0"]
 follow_viewport_enable = true
 
-[node name="Node" type="VBoxContainer" parent="ParallaxBackground/ParallaxLayer/CanvasLayer" index="0"]
+[node name="Control" type="Control" parent="ParallaxBackground/ParallaxLayer/CanvasLayer" index="0"]
+margin_left = 36.0
+margin_top = -110.0
+margin_right = 76.0
+margin_bottom = -70.0
+theme = ExtResource( 2 )
+
+[node name="Node" type="VBoxContainer" parent="ParallaxBackground/ParallaxLayer/CanvasLayer/Control" index="0"]
 margin_left = -480.0
 margin_top = -173.0
 margin_right = 20.0
 margin_bottom = 393.0
 rect_min_size = Vector2( 500, 300 )
-theme = ExtResource( 2 )
 
-[node name="Label" type="Label" parent="ParallaxBackground/ParallaxLayer/CanvasLayer/Node" index="0"]
+[node name="Label" type="Label" parent="ParallaxBackground/ParallaxLayer/CanvasLayer/Control/Node" index="0"]
 margin_right = 500.0
 margin_bottom = 37.0
 custom_fonts/font = ExtResource( 3 )
 text = "Perpetual Drudgery?"
 align = 1
 
-[node name="RichTextLabel" type="RichTextLabel" parent="ParallaxBackground/ParallaxLayer/CanvasLayer/Node" index="1"]
+[node name="RichTextLabel" type="RichTextLabel" parent="ParallaxBackground/ParallaxLayer/CanvasLayer/Control/Node" index="1"]
 margin_top = 41.0
 margin_right = 500.0
 margin_bottom = 566.0
@@ -48,21 +54,20 @@ For example in Fuller's text, she expresses she viewed native women as  \"banish
 Yet this is inherently from a Eurocentric view -- from a their perspective, hunting is done for recreation, while agriculture is done for sustenance (Reed 71). And it doesn't help that decades of colonialism pushed for the a binary categorization of natives. As Driskill mentioned,  the chroniclers of De Soto, a spanish conquistador, \"[needed] to characterize Indigenous nations in the Southeast as either savage—and thus needing to be contained by Spanish imperialism—or noble, and thus willing to concede power to the Spanish and aid them in their colonial project\" (58). This meant natives were either depicts as welcoming of European tradition, or as \"savage\" -- \"barbarous\" in Jefferson's words -- that must be tamed by \"imperialism.\""
 fit_content_height = true
 
-[node name="VBoxContainer" type="VBoxContainer" parent="ParallaxBackground/ParallaxLayer/CanvasLayer" index="1"]
+[node name="VBoxContainer" type="VBoxContainer" parent="ParallaxBackground/ParallaxLayer/CanvasLayer/Control" index="1"]
 margin_left = 37.0
 margin_top = -169.0
-margin_right = 437.0
+margin_right = 445.0
 margin_bottom = 431.0
 rect_min_size = Vector2( 350, 600 )
-theme = ExtResource( 2 )
 custom_constants/separation = 24
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="ParallaxBackground/ParallaxLayer/CanvasLayer/VBoxContainer" index="0"]
+[node name="VBoxContainer2" type="VBoxContainer" parent="ParallaxBackground/ParallaxLayer/CanvasLayer/Control/VBoxContainer" index="0"]
 margin_right = 408.0
 margin_bottom = 288.0
 size_flags_vertical = 3
 
-[node name="TextureRect" type="TextureRect" parent="ParallaxBackground/ParallaxLayer/CanvasLayer/VBoxContainer/VBoxContainer2" index="0"]
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground/ParallaxLayer/CanvasLayer/Control/VBoxContainer/VBoxContainer2" index="0"]
 margin_right = 408.0
 margin_bottom = 256.0
 size_flags_vertical = 3
@@ -70,19 +75,19 @@ texture = ExtResource( 4 )
 expand = true
 stretch_mode = 7
 
-[node name="Label" type="Label" parent="ParallaxBackground/ParallaxLayer/CanvasLayer/VBoxContainer/VBoxContainer2" index="1"]
+[node name="Label" type="Label" parent="ParallaxBackground/ParallaxLayer/CanvasLayer/Control/VBoxContainer/VBoxContainer2" index="1"]
 margin_top = 260.0
 margin_right = 408.0
 margin_bottom = 288.0
 text = "Indigenous women plowing fields was seen as drudgery."
 
-[node name="VBoxContainer" type="VBoxContainer" parent="ParallaxBackground/ParallaxLayer/CanvasLayer/VBoxContainer" index="1"]
+[node name="VBoxContainer" type="VBoxContainer" parent="ParallaxBackground/ParallaxLayer/CanvasLayer/Control/VBoxContainer" index="1"]
 margin_top = 312.0
 margin_right = 408.0
 margin_bottom = 600.0
 size_flags_vertical = 3
 
-[node name="Jefferson" type="TextureRect" parent="ParallaxBackground/ParallaxLayer/CanvasLayer/VBoxContainer/VBoxContainer" index="0"]
+[node name="Jefferson" type="TextureRect" parent="ParallaxBackground/ParallaxLayer/CanvasLayer/Control/VBoxContainer/VBoxContainer" index="0"]
 margin_right = 408.0
 margin_bottom = 233.0
 size_flags_vertical = 3
@@ -90,7 +95,7 @@ texture = ExtResource( 5 )
 expand = true
 stretch_mode = 7
 
-[node name="Label2" type="Label" parent="ParallaxBackground/ParallaxLayer/CanvasLayer/VBoxContainer/VBoxContainer" index="1"]
+[node name="Label2" type="Label" parent="ParallaxBackground/ParallaxLayer/CanvasLayer/Control/VBoxContainer/VBoxContainer" index="1"]
 margin_top = 237.0
 margin_right = 408.0
 margin_bottom = 288.0

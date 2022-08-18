@@ -13,7 +13,13 @@ canvasLayerPaths = [ NodePath("ParallaxBackground/ParallaxLayer/CanvasLayer") ]
 [node name="CanvasLayer" type="CanvasLayer" parent="ParallaxBackground/ParallaxLayer" index="0"]
 follow_viewport_enable = true
 
-[node name="Node" type="VBoxContainer" parent="ParallaxBackground/ParallaxLayer/CanvasLayer" index="0"]
+[node name="Control" type="Control" parent="ParallaxBackground/ParallaxLayer/CanvasLayer" index="0"]
+margin_left = 140.0
+margin_top = 62.0
+margin_right = 180.0
+margin_bottom = 102.0
+
+[node name="Node" type="VBoxContainer" parent="ParallaxBackground/ParallaxLayer/CanvasLayer/Control" index="0"]
 margin_left = -236.0
 margin_top = -223.0
 margin_right = 164.0
@@ -21,14 +27,14 @@ margin_bottom = 238.0
 rect_min_size = Vector2( 400, 300 )
 theme = ExtResource( 2 )
 
-[node name="Label" type="Label" parent="ParallaxBackground/ParallaxLayer/CanvasLayer/Node" index="0"]
+[node name="Label" type="Label" parent="ParallaxBackground/ParallaxLayer/CanvasLayer/Control/Node" index="0"]
 margin_right = 400.0
 margin_bottom = 37.0
 custom_fonts/font = ExtResource( 3 )
 text = "Summer on the Lakes"
 align = 1
 
-[node name="RichTextLabel" type="RichTextLabel" parent="ParallaxBackground/ParallaxLayer/CanvasLayer/Node" index="1"]
+[node name="RichTextLabel" type="RichTextLabel" parent="ParallaxBackground/ParallaxLayer/CanvasLayer/Control/Node" index="1"]
 margin_top = 41.0
 margin_right = 400.0
 margin_bottom = 461.0
@@ -47,7 +53,7 @@ In this text, Fuller criticizes the Native Americans' division of gender, believ
 But she also takes time to acknowledge the faults of the church -- such as introducing Native Americans slavery and alcholism."
 fit_content_height = true
 
-[node name="TextureRect" type="TextureRect" parent="ParallaxBackground/ParallaxLayer/CanvasLayer" index="1"]
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground/ParallaxLayer/CanvasLayer/Control" index="1"]
 margin_left = -434.0
 margin_top = -223.0
 margin_right = -264.0

@@ -147,7 +147,7 @@ text = "European Perspective"
 position = Vector2( 1846, -1093 )
 
 [node name="Perpetual Drudgery\?" parent="." instance=ExtResource( 7 )]
-position = Vector2( 3337, 159 )
+position = Vector2( 3304, 144 )
 
 [node name="Connections" type="Node2D" parent="."]
 
@@ -179,12 +179,12 @@ TargetExhibitPath = NodePath("../../../../Gender Expression")
 
 [node name="ExhibitConnection3" parent="Connections" instance=ExtResource( 5 )]
 position = Vector2( 2591, 439 )
-points = PoolVector2Array( -379, -595, 160, -352 )
+points = PoolVector2Array( -407, -465, 160, -352 )
 startExhibitPath = NodePath("../../Summer on the Lakes")
 endExhibitPath = NodePath("../../Perpetual Drudgery\?")
 
 [node name="Start" parent="Connections/ExhibitConnection3" index="0"]
-position = Vector2( -379, -595 )
+position = Vector2( -407, -465 )
 
 [node name="StartLabel" parent="Connections/ExhibitConnection3/Start" index="0"]
 bbcode_text = "[center][b]Perpetual Drudgery?[/b][/center]"
@@ -282,7 +282,7 @@ text = "European Perspective"
 TargetExhibitPath = NodePath("../../../../European Perspective")
 
 [node name="Summer on the Lakes" parent="." instance=ExtResource( 6 )]
-position = Vector2( 1972, -12 )
+position = Vector2( 1831, -176 )
 
 [editable path="Native American Gender and Colonialism in 1800s"]
 [editable path="Gender Expression"]
