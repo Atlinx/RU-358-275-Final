@@ -48,7 +48,6 @@ public partial class ExhibitConnectionNode : Node2D
         {
             animationTree?.Set("parameters/conditions/hovered", hovered);
             animationTree?.Set("parameters/conditions/not_hovered", !hovered);
-            GD.Print(GetParent().GetParent().Name + " hover changed: " + hovered + " new: " + animationTree.Get("parameters/conditions/hovered") + " not " + animationTree.Get("parameters/conditions/not_hovered"));
         };
 
         visit.MouseDownChanged += (mouseDown) =>
