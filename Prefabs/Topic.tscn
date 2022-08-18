@@ -18,6 +18,7 @@ margin_top = -153.0
 margin_right = 148.0
 margin_bottom = 147.0
 rect_min_size = Vector2( 300, 300 )
+mouse_filter = 2
 theme = ExtResource( 2 )
 alignment = 1
 
