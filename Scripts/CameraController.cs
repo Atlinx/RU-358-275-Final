@@ -92,7 +92,7 @@ public partial class CameraController : Camera2D
     {
         if (visitTween.IsActive())
             visitTween.Stop(this);
-        visitTween.InterpolateProperty(this, "position", Position, newPosition, duration);
+        visitTween.InterpolateProperty(this, "position", Position, newPosition, duration, Tween.TransitionType.Sine, Tween.EaseType.Out);
         visitTween.Start();
     }
 }
