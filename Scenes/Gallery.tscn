@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=36 format=2]
 
 [ext_resource path="res://Prefabs/Topic.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Prefabs/Camera.tscn" type="PackedScene" id=2]
@@ -17,6 +17,42 @@
 [ext_resource path="res://Prefabs/Exhibits/LadyOfCofitachequi.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Prefabs/Exhibits/FirstContact.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Prefabs/Exhibits/Ojib-way Maid.tscn" type="PackedScene" id=17]
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=1]
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=2]
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=3]
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=4]
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=5]
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=6]
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=7]
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=8]
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=9]
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=10]
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=11]
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=12]
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=13]
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=14]
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=15]
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=16]
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=17]
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=18]
 
 [node name="Gallery" type="Node2D"]
 script = ExtResource( 3 )
@@ -61,7 +97,14 @@ text = "Home"
 icon = ExtResource( 12 )
 script = ExtResource( 11 )
 CameraControllerPath = NodePath("../../../../Camera2D")
-ExhibitPath = NodePath("../../../../Native American Gender and Colonialism in 1800s")
+ExhibitPath = NodePath("../../../../Native American Gender and Colonialism")
+
+[node name="Label" type="Label" parent="OverlayCanvas/OverlayUI/HBoxContainer"]
+margin_left = 458.0
+margin_top = 1.0
+margin_right = 945.0
+margin_bottom = 29.0
+text = "Click and drag your mouse to move. Click on a circle to visit a node. "
 
 [node name="Camera2D" parent="." instance=ExtResource( 2 )]
 position = Vector2( -1, -8 )
@@ -77,6 +120,8 @@ endExhibitPath = NodePath("../../We Wha")
 
 [node name="Start" parent="Connections/ExhibitConnection" index="0"]
 position = Vector2( 545, -508 )
+labelText = "We Wha"
+targetExhibitPath = NodePath("../../../We Wha")
 
 [node name="StartLabel" parent="Connections/ExhibitConnection/Start" index="0"]
 bbcode_text = "[center][b]We Wha[/b][/center]"
@@ -85,8 +130,13 @@ text = "We Wha"
 [node name="VisitStart" parent="Connections/ExhibitConnection/Start" index="1"]
 TargetExhibitPath = NodePath("../../../../We Wha")
 
+[node name="AnimationTree" parent="Connections/ExhibitConnection/Start" index="2"]
+parameters/playback = SubResource( 1 )
+
 [node name="End" parent="Connections/ExhibitConnection" index="1"]
 position = Vector2( 1142, -808 )
+labelText = "Native Gender Expression"
+targetExhibitPath = NodePath("../../../Native Gender Expression")
 
 [node name="EndLabel" parent="Connections/ExhibitConnection/End" index="0"]
 bbcode_text = "[center][b]Native Gender Expression[/b][/center]"
@@ -94,6 +144,9 @@ text = "Native Gender Expression"
 
 [node name="VisitEnd" parent="Connections/ExhibitConnection/End" index="1"]
 TargetExhibitPath = NodePath("../../../../Native Gender Expression")
+
+[node name="AnimationTree" parent="Connections/ExhibitConnection/End" index="2"]
+parameters/playback = SubResource( 2 )
 
 [node name="ExhibitConnection9" parent="Connections" instance=ExtResource( 5 )]
 position = Vector2( 354, -115 )
@@ -103,6 +156,8 @@ endExhibitPath = NodePath("../../Ojib-way Maid")
 
 [node name="Start" parent="Connections/ExhibitConnection9" index="0"]
 position = Vector2( 527, -508 )
+labelText = "Ojib-way Maid"
+targetExhibitPath = NodePath("../../../Ojib-way Maid")
 
 [node name="StartLabel" parent="Connections/ExhibitConnection9/Start" index="0"]
 bbcode_text = "[center][b]Ojib-way Maid[/b][/center]"
@@ -111,8 +166,13 @@ text = "Ojib-way Maid"
 [node name="VisitStart" parent="Connections/ExhibitConnection9/Start" index="1"]
 TargetExhibitPath = NodePath("../../../../Ojib-way Maid")
 
+[node name="AnimationTree" parent="Connections/ExhibitConnection9/Start" index="2"]
+parameters/playback = SubResource( 3 )
+
 [node name="End" parent="Connections/ExhibitConnection9" index="1"]
 position = Vector2( 321, -996 )
+labelText = "Native Gender Expression"
+targetExhibitPath = NodePath("../../../Native Gender Expression")
 
 [node name="EndLabel" parent="Connections/ExhibitConnection9/End" index="0"]
 bbcode_text = "[center][b]Native Gender Expression[/b][/center]"
@@ -120,6 +180,9 @@ text = "Native Gender Expression"
 
 [node name="VisitEnd" parent="Connections/ExhibitConnection9/End" index="1"]
 TargetExhibitPath = NodePath("../../../../Native Gender Expression")
+
+[node name="AnimationTree" parent="Connections/ExhibitConnection9/End" index="2"]
+parameters/playback = SubResource( 4 )
 
 [node name="ExhibitConnection3" parent="Connections" instance=ExtResource( 5 )]
 position = Vector2( 2591, 439 )
@@ -129,6 +192,8 @@ endExhibitPath = NodePath("../../Perpetual Drudgery\?")
 
 [node name="Start" parent="Connections/ExhibitConnection3" index="0"]
 position = Vector2( -407, -465 )
+labelText = "Perpetual Drudgery?"
+targetExhibitPath = NodePath("../../../Perpetual Drudgery\?")
 
 [node name="StartLabel" parent="Connections/ExhibitConnection3/Start" index="0"]
 bbcode_text = "[center][b]Perpetual Drudgery?[/b][/center]"
@@ -137,8 +202,13 @@ text = "Perpetual Drudgery?"
 [node name="VisitStart" parent="Connections/ExhibitConnection3/Start" index="1"]
 TargetExhibitPath = NodePath("../../../../Perpetual Drudgery\?")
 
+[node name="AnimationTree" parent="Connections/ExhibitConnection3/Start" index="2"]
+parameters/playback = SubResource( 5 )
+
 [node name="End" parent="Connections/ExhibitConnection3" index="1"]
 position = Vector2( 160, -352 )
+labelText = "Summer on the Lakes"
+targetExhibitPath = NodePath("../../../Summer on the Lakes")
 
 [node name="EndLabel" parent="Connections/ExhibitConnection3/End" index="0"]
 bbcode_text = "[center][b]Summer on the Lakes[/b][/center]"
@@ -147,14 +217,19 @@ text = "Summer on the Lakes"
 [node name="VisitEnd" parent="Connections/ExhibitConnection3/End" index="1"]
 TargetExhibitPath = NodePath("../../../../Summer on the Lakes")
 
+[node name="AnimationTree" parent="Connections/ExhibitConnection3/End" index="2"]
+parameters/playback = SubResource( 6 )
+
 [node name="ExhibitConnection4" parent="Connections" instance=ExtResource( 5 )]
 position = Vector2( 588, 590 )
 points = PoolVector2Array( -312, -470, -1, -197 )
-startExhibitPath = NodePath("../../Native American Gender and Colonialism in 1800s")
+startExhibitPath = NodePath("../../Native American Gender and Colonialism")
 endExhibitPath = NodePath("../../European Perspective")
 
 [node name="Start" parent="Connections/ExhibitConnection4" index="0"]
 position = Vector2( -312, -470 )
+labelText = "European Perspective"
+targetExhibitPath = NodePath("../../../European Perspective")
 
 [node name="StartLabel" parent="Connections/ExhibitConnection4/Start" index="0"]
 bbcode_text = "[center][b]European Perspective[/b][/center]"
@@ -163,24 +238,34 @@ text = "European Perspective"
 [node name="VisitStart" parent="Connections/ExhibitConnection4/Start" index="1"]
 TargetExhibitPath = NodePath("../../../../European Perspective")
 
+[node name="AnimationTree" parent="Connections/ExhibitConnection4/Start" index="2"]
+parameters/playback = SubResource( 7 )
+
 [node name="End" parent="Connections/ExhibitConnection4" index="1"]
 position = Vector2( -1, -197 )
+labelText = "Native American Gender and Colonialism"
+targetExhibitPath = NodePath("../../../Native American Gender and Colonialism")
 
 [node name="EndLabel" parent="Connections/ExhibitConnection4/End" index="0"]
-bbcode_text = "[center][b]Native American Gender and Colonialism in 1800s[/b][/center]"
-text = "Native American Gender and Colonialism in 1800s"
+bbcode_text = "[center][b]Native American Gender and Colonialism[/b][/center]"
+text = "Native American Gender and Colonialism"
 
 [node name="VisitEnd" parent="Connections/ExhibitConnection4/End" index="1"]
-TargetExhibitPath = NodePath("../../../../Native American Gender and Colonialism in 1800s")
+TargetExhibitPath = NodePath("../../../../Native American Gender and Colonialism")
+
+[node name="AnimationTree" parent="Connections/ExhibitConnection4/End" index="2"]
+parameters/playback = SubResource( 8 )
 
 [node name="ExhibitConnection5" parent="Connections" instance=ExtResource( 5 )]
 position = Vector2( 377, 388 )
 points = PoolVector2Array( -106, -543, 270, -870 )
-startExhibitPath = NodePath("../../Native American Gender and Colonialism in 1800s")
+startExhibitPath = NodePath("../../Native American Gender and Colonialism")
 endExhibitPath = NodePath("../../Native Gender Expression")
 
 [node name="Start" parent="Connections/ExhibitConnection5" index="0"]
 position = Vector2( -106, -543 )
+labelText = "Native Gender Expression"
+targetExhibitPath = NodePath("../../../Native Gender Expression")
 
 [node name="StartLabel" parent="Connections/ExhibitConnection5/Start" index="0"]
 bbcode_text = "[center][b]Native Gender Expression[/b][/center]"
@@ -189,15 +274,23 @@ text = "Native Gender Expression"
 [node name="VisitStart" parent="Connections/ExhibitConnection5/Start" index="1"]
 TargetExhibitPath = NodePath("../../../../Native Gender Expression")
 
+[node name="AnimationTree" parent="Connections/ExhibitConnection5/Start" index="2"]
+parameters/playback = SubResource( 9 )
+
 [node name="End" parent="Connections/ExhibitConnection5" index="1"]
 position = Vector2( 270, -870 )
+labelText = "Native American Gender and Colonialism"
+targetExhibitPath = NodePath("../../../Native American Gender and Colonialism")
 
 [node name="EndLabel" parent="Connections/ExhibitConnection5/End" index="0"]
-bbcode_text = "[center][b]Native American Gender and Colonialism in 1800s[/b][/center]"
-text = "Native American Gender and Colonialism in 1800s"
+bbcode_text = "[center][b]Native American Gender and Colonialism[/b][/center]"
+text = "Native American Gender and Colonialism"
 
 [node name="VisitEnd" parent="Connections/ExhibitConnection5/End" index="1"]
-TargetExhibitPath = NodePath("../../../../Native American Gender and Colonialism in 1800s")
+TargetExhibitPath = NodePath("../../../../Native American Gender and Colonialism")
+
+[node name="AnimationTree" parent="Connections/ExhibitConnection5/End" index="2"]
+parameters/playback = SubResource( 10 )
 
 [node name="ExhibitConnection2" parent="Connections" instance=ExtResource( 5 )]
 position = Vector2( 1411, 610 )
@@ -207,6 +300,8 @@ endExhibitPath = NodePath("../../Summer on the Lakes")
 
 [node name="Start" parent="Connections/ExhibitConnection2" index="0"]
 position = Vector2( -318, -316 )
+labelText = "Summer on the Lakes"
+targetExhibitPath = NodePath("../../../Summer on the Lakes")
 
 [node name="StartLabel" parent="Connections/ExhibitConnection2/Start" index="0"]
 bbcode_text = "[center][b]Summer on the Lakes[/b][/center]"
@@ -215,8 +310,13 @@ text = "Summer on the Lakes"
 [node name="VisitStart" parent="Connections/ExhibitConnection2/Start" index="1"]
 TargetExhibitPath = NodePath("../../../../Summer on the Lakes")
 
+[node name="AnimationTree" parent="Connections/ExhibitConnection2/Start" index="2"]
+parameters/playback = SubResource( 11 )
+
 [node name="End" parent="Connections/ExhibitConnection2" index="1"]
 position = Vector2( 24, -812 )
+labelText = "European Perspective"
+targetExhibitPath = NodePath("../../../European Perspective")
 
 [node name="EndLabel" parent="Connections/ExhibitConnection2/End" index="0"]
 bbcode_text = "[center][b]European Perspective[/b][/center]"
@@ -224,6 +324,9 @@ text = "European Perspective"
 
 [node name="VisitEnd" parent="Connections/ExhibitConnection2/End" index="1"]
 TargetExhibitPath = NodePath("../../../../European Perspective")
+
+[node name="AnimationTree" parent="Connections/ExhibitConnection2/End" index="2"]
+parameters/playback = SubResource( 12 )
 
 [node name="ExhibitConnection6" parent="Connections" instance=ExtResource( 5 )]
 position = Vector2( 1232, 732 )
@@ -233,6 +336,8 @@ endExhibitPath = NodePath("../../First Contact")
 
 [node name="Start" parent="Connections/ExhibitConnection6" index="0"]
 position = Vector2( -140, -284 )
+labelText = "First Contact"
+targetExhibitPath = NodePath("../../../First Contact")
 
 [node name="StartLabel" parent="Connections/ExhibitConnection6/Start" index="0"]
 bbcode_text = "[center][b]First Contact[/b][/center]"
@@ -241,8 +346,13 @@ text = "First Contact"
 [node name="VisitStart" parent="Connections/ExhibitConnection6/Start" index="1"]
 TargetExhibitPath = NodePath("../../../../First Contact")
 
+[node name="AnimationTree" parent="Connections/ExhibitConnection6/Start" index="2"]
+parameters/playback = SubResource( 13 )
+
 [node name="End" parent="Connections/ExhibitConnection6" index="1"]
 position = Vector2( -53, 84 )
+labelText = "European Perspective"
+targetExhibitPath = NodePath("../../../European Perspective")
 
 [node name="EndLabel" parent="Connections/ExhibitConnection6/End" index="0"]
 bbcode_text = "[center][b]European Perspective[/b][/center]"
@@ -250,6 +360,9 @@ text = "European Perspective"
 
 [node name="VisitEnd" parent="Connections/ExhibitConnection6/End" index="1"]
 TargetExhibitPath = NodePath("../../../../European Perspective")
+
+[node name="AnimationTree" parent="Connections/ExhibitConnection6/End" index="2"]
+parameters/playback = SubResource( 14 )
 
 [node name="ExhibitConnection7" parent="Connections" instance=ExtResource( 5 )]
 position = Vector2( 2215, 1076 )
@@ -259,6 +372,8 @@ endExhibitPath = NodePath("../../Gendercide")
 
 [node name="Start" parent="Connections/ExhibitConnection7" index="0"]
 position = Vector2( -96, 34 )
+labelText = "Gendercide"
+targetExhibitPath = NodePath("../../../Gendercide")
 
 [node name="StartLabel" parent="Connections/ExhibitConnection7/Start" index="0"]
 bbcode_text = "[center][b]Gendercide[/b][/center]"
@@ -267,8 +382,13 @@ text = "Gendercide"
 [node name="VisitStart" parent="Connections/ExhibitConnection7/Start" index="1"]
 TargetExhibitPath = NodePath("../../../../Gendercide")
 
+[node name="AnimationTree" parent="Connections/ExhibitConnection7/Start" index="2"]
+parameters/playback = SubResource( 15 )
+
 [node name="End" parent="Connections/ExhibitConnection7" index="1"]
 position = Vector2( 333, -254 )
+labelText = "First Contact"
+targetExhibitPath = NodePath("../../../First Contact")
 
 [node name="EndLabel" parent="Connections/ExhibitConnection7/End" index="0"]
 bbcode_text = "[center][b]First Contact[/b][/center]"
@@ -276,6 +396,9 @@ text = "First Contact"
 
 [node name="VisitEnd" parent="Connections/ExhibitConnection7/End" index="1"]
 TargetExhibitPath = NodePath("../../../../First Contact")
+
+[node name="AnimationTree" parent="Connections/ExhibitConnection7/End" index="2"]
+parameters/playback = SubResource( 16 )
 
 [node name="ExhibitConnection8" parent="Connections" instance=ExtResource( 5 )]
 position = Vector2( 2290, 1514 )
@@ -285,6 +408,8 @@ endExhibitPath = NodePath("../../Lady of Cofitachequi")
 
 [node name="Start" parent="Connections/ExhibitConnection8" index="0"]
 position = Vector2( -171, -262 )
+labelText = "Lady of Cofitachequi"
+targetExhibitPath = NodePath("../../../Lady of Cofitachequi")
 
 [node name="StartLabel" parent="Connections/ExhibitConnection8/Start" index="0"]
 bbcode_text = "[center][b]Lady of Cofitachequi[/b][/center]"
@@ -293,8 +418,13 @@ text = "Lady of Cofitachequi"
 [node name="VisitStart" parent="Connections/ExhibitConnection8/Start" index="1"]
 TargetExhibitPath = NodePath("../../../../Lady of Cofitachequi")
 
+[node name="AnimationTree" parent="Connections/ExhibitConnection8/Start" index="2"]
+parameters/playback = SubResource( 17 )
+
 [node name="End" parent="Connections/ExhibitConnection8" index="1"]
 position = Vector2( -146, 33 )
+labelText = "First Contact"
+targetExhibitPath = NodePath("../../../First Contact")
 
 [node name="EndLabel" parent="Connections/ExhibitConnection8/End" index="0"]
 bbcode_text = "[center][b]First Contact[/b][/center]"
@@ -303,33 +433,36 @@ text = "First Contact"
 [node name="VisitEnd" parent="Connections/ExhibitConnection8/End" index="1"]
 TargetExhibitPath = NodePath("../../../../First Contact")
 
-[node name="Native American Gender and Colonialism in 1800s" parent="." instance=ExtResource( 1 )]
+[node name="AnimationTree" parent="Connections/ExhibitConnection8/End" index="2"]
+parameters/playback = SubResource( 18 )
+
+[node name="Native American Gender and Colonialism" parent="." instance=ExtResource( 1 )]
 position = Vector2( 4, -10 )
 canvasLayerPaths = [ NodePath("ParallaxBackground/ParallaxLayer/CanvasLayer"), NodePath("CanvasLayer") ]
 
-[node name="ParallaxBackground" parent="Native American Gender and Colonialism in 1800s" index="0"]
+[node name="ParallaxBackground" parent="Native American Gender and Colonialism" index="0"]
 offset = Vector2( 4, -10 )
 transform = Transform2D( 1, 0, 0, 1, 4, -10 )
 
-[node name="CanvasLayer" parent="Native American Gender and Colonialism in 1800s/ParallaxBackground/ParallaxLayer" index="0"]
+[node name="CanvasLayer" parent="Native American Gender and Colonialism/ParallaxBackground/ParallaxLayer" index="0"]
 layer = 10
 offset = Vector2( 4, -10 )
 transform = Transform2D( 1, 0, 0, 1, 4, -10 )
 
-[node name="Node" parent="Native American Gender and Colonialism in 1800s/ParallaxBackground/ParallaxLayer/CanvasLayer" index="0"]
+[node name="Node" parent="Native American Gender and Colonialism/ParallaxBackground/ParallaxLayer/CanvasLayer" index="0"]
 margin_top = -267.0
 margin_bottom = 33.0
 
-[node name="RichTextLabel" parent="Native American Gender and Colonialism in 1800s/ParallaxBackground/ParallaxLayer/CanvasLayer/Node" index="0"]
-margin_top = 53.0
-margin_bottom = 122.0
-text = "Native American Gender and Colonialism in 1800s"
+[node name="RichTextLabel" parent="Native American Gender and Colonialism/ParallaxBackground/ParallaxLayer/CanvasLayer/Node" index="0"]
+margin_top = 37.0
+margin_bottom = 138.0
+text = "Native American Gender and Colonialism from 1600-1800s"
 autowrap = true
 
-[node name="Label" type="Label" parent="Native American Gender and Colonialism in 1800s/ParallaxBackground/ParallaxLayer/CanvasLayer/Node" index="1"]
-margin_top = 126.0
+[node name="Label" type="Label" parent="Native American Gender and Colonialism/ParallaxBackground/ParallaxLayer/CanvasLayer/Node" index="1"]
+margin_top = 142.0
 margin_right = 300.0
-margin_bottom = 246.0
+margin_bottom = 262.0
 text = "By Alan Tong
 
 Culture of History Now
@@ -337,14 +470,14 @@ RU:358:275
 Professor Eagan Dean"
 align = 1
 
-[node name="CanvasLayer" type="CanvasLayer" parent="Native American Gender and Colonialism in 1800s"]
+[node name="CanvasLayer" type="CanvasLayer" parent="Native American Gender and Colonialism"]
 layer = -1
 offset = Vector2( 4, -10 )
 transform = Transform2D( 1, 0, 0, 1, 4, -10 )
 follow_viewport_enable = true
 follow_viewport_scale = 0.8
 
-[node name="TextureRect" type="TextureRect" parent="Native American Gender and Colonialism in 1800s/CanvasLayer"]
+[node name="TextureRect" type="TextureRect" parent="Native American Gender and Colonialism/CanvasLayer"]
 margin_left = -151.0
 margin_top = 44.0
 margin_right = 149.0
@@ -431,6 +564,6 @@ position = Vector2( 820, -1572 )
 [editable path="Connections/ExhibitConnection8"]
 [editable path="Connections/ExhibitConnection8/Start/VisitStart"]
 [editable path="Connections/ExhibitConnection8/End/VisitEnd"]
-[editable path="Native American Gender and Colonialism in 1800s"]
+[editable path="Native American Gender and Colonialism"]
 [editable path="Native Gender Expression"]
 [editable path="European Perspective"]

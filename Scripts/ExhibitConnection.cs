@@ -34,38 +34,36 @@ public partial class ExhibitConnection : Line2D
     [Export]
     private NodePath endExhibitPath;
     public Exhibit EndExhibit => GetNodeOrNull<Exhibit>(endExhibitPath);
-
     [Export]
     private NodePath startNodePath;
-    private Node2D startNode => GetNode<Node2D>(startNodePath);
+    private ExhibitConnectionNode startNode => GetNodeOrNull<ExhibitConnectionNode>(startNodePath);
     [Export]
     private NodePath endNodePath;
-    private Node2D endNode => GetNode<Node2D>(endNodePath);
-    [Export]
-    private NodePath startLabelPath;
-    private RichTextLabel startLabel => GetNode<RichTextLabel>(startLabelPath);
-    [Export]
-    private NodePath endLabelPath;
-    private RichTextLabel endLabel => GetNode<RichTextLabel>(endLabelPath);
-    [Export]
-    private NodePath visitStartPath;
-    private VisitExhibit visitStart => GetNode<VisitExhibit>(visitStartPath);
-    [Export]
-    private NodePath visitEndPath;
-    private VisitExhibit visitEnd => GetNode<VisitExhibit>(visitEndPath);
+    private ExhibitConnectionNode endNode => GetNodeOrNull<ExhibitConnectionNode>(endNodePath);
+
+    public override void _Ready()
+    {
+        if (Engine.EditorHint) return;
+    }
 
     public override void _Process(float delta)
     {
         if (Engine.EditorHint)
         {
-            if (visitStart != null && EndExhibit != null && visitStart.TargetExhibitPath != visitStart.GetPathTo(EndExhibit))
-                visitStart.TargetExhibitPath = visitStart.GetPathTo(EndExhibit);
-            if (visitEnd != null && StartExhibit != null && visitEnd.TargetExhibitPath != visitEnd.GetPathTo(StartExhibit))
-                visitEnd.TargetExhibitPath = visitStart.GetPathTo(StartExhibit);
-            if (startLabel != null && startLabel.Text != StartText)
-                startLabel.BbcodeText = $"[center][b]{StartText}[/b][/center]";
-            if (endLabel != null && endLabel.Text != EndText)
-                endLabel.BbcodeText = $"[center][b]{EndText}[/b][/center]";
+            if (startNode != null)
+            {
+                if (EndExhibit != null && startNode.TargetExhibit != EndExhibit)
+                    startNode.TargetExhibit = EndExhibit;
+                if (startNode.LabelText != StartText)
+                    startNode.LabelText = StartText;
+            }
+            if (endNode != null)
+            {
+                if (StartExhibit != null && endNode.TargetExhibit != StartExhibit)
+                    endNode.TargetExhibit = StartExhibit;
+                if (endNode.LabelText != EndText)
+                    endNode.LabelText = EndText;
+            }
             if ((startNode != null && endNode != null) && (Points == null || Points.Length == 0 || startNode.Position != Points[0] || endNode.Position != Points[1]))
                 Points = new Vector2[] { startNode.Position, endNode.Position };
         }
