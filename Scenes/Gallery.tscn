@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Prefabs/Topic.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Prefabs/Camera.tscn" type="PackedScene" id=2]
@@ -13,7 +13,9 @@
 [ext_resource path="res://Scripts/VisitExhibitUIButton.cs" type="Script" id=11]
 [ext_resource path="res://Art/Anchor.png" type="Texture" id=12]
 [ext_resource path="res://Art/ExternalLink.png" type="Texture" id=13]
-[ext_resource path="res://Prefabs/Exhibits/DeSotosGendercide.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Prefabs/Exhibits/Gendercide.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Prefabs/Exhibits/LadyOfCofitachequi.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Prefabs/Exhibits/FirstContact.tscn" type="PackedScene" id=16]
 
 [node name="Gallery" type="Node2D"]
 script = ExtResource( 3 )
@@ -63,92 +65,6 @@ ExhibitPath = NodePath("../../../../Native American Gender and Colonialism in 18
 [node name="Camera2D" parent="." instance=ExtResource( 2 )]
 position = Vector2( -1, -8 )
 CanMove = true
-
-[node name="Native American Gender and Colonialism in 1800s" parent="." instance=ExtResource( 1 )]
-position = Vector2( 4, -10 )
-canvasLayerPaths = [ NodePath("ParallaxBackground/ParallaxLayer/CanvasLayer"), NodePath("CanvasLayer") ]
-
-[node name="ParallaxBackground" parent="Native American Gender and Colonialism in 1800s" index="0"]
-offset = Vector2( 4, -10 )
-transform = Transform2D( 1, 0, 0, 1, 4, -10 )
-
-[node name="CanvasLayer" parent="Native American Gender and Colonialism in 1800s/ParallaxBackground/ParallaxLayer" index="0"]
-layer = 10
-offset = Vector2( 4, -10 )
-transform = Transform2D( 1, 0, 0, 1, 4, -10 )
-
-[node name="Node" parent="Native American Gender and Colonialism in 1800s/ParallaxBackground/ParallaxLayer/CanvasLayer" index="0"]
-margin_top = -267.0
-margin_bottom = 33.0
-
-[node name="RichTextLabel" parent="Native American Gender and Colonialism in 1800s/ParallaxBackground/ParallaxLayer/CanvasLayer/Node" index="0"]
-margin_top = 53.0
-margin_bottom = 122.0
-text = "Native American Gender and Colonialism in 1800s"
-autowrap = true
-
-[node name="Label" type="Label" parent="Native American Gender and Colonialism in 1800s/ParallaxBackground/ParallaxLayer/CanvasLayer/Node" index="1"]
-margin_top = 126.0
-margin_right = 300.0
-margin_bottom = 246.0
-text = "By Alan Tong
-
-Culture of History Now
-RU:358:275
-Professor Eagan Dean"
-align = 1
-
-[node name="CanvasLayer" type="CanvasLayer" parent="Native American Gender and Colonialism in 1800s"]
-layer = -1
-offset = Vector2( 4, -10 )
-transform = Transform2D( 1, 0, 0, 1, 4, -10 )
-follow_viewport_enable = true
-follow_viewport_scale = 0.8
-
-[node name="TextureRect" type="TextureRect" parent="Native American Gender and Colonialism in 1800s/CanvasLayer"]
-margin_left = -151.0
-margin_top = 44.0
-margin_right = 149.0
-margin_bottom = 344.0
-rect_min_size = Vector2( 0, 300 )
-mouse_filter = 2
-texture = ExtResource( 10 )
-expand = true
-stretch_mode = 5
-
-[node name="Gender Expression" parent="." instance=ExtResource( 1 )]
-position = Vector2( 881, -478 )
-
-[node name="ParallaxBackground" parent="Gender Expression" index="0"]
-offset = Vector2( 881, -478 )
-transform = Transform2D( 1, 0, 0, 1, 881, -478 )
-
-[node name="CanvasLayer" parent="Gender Expression/ParallaxBackground/ParallaxLayer" index="0"]
-offset = Vector2( 881, -478 )
-transform = Transform2D( 1, 0, 0, 1, 881, -478 )
-
-[node name="RichTextLabel" parent="Gender Expression/ParallaxBackground/ParallaxLayer/CanvasLayer/Node" index="0"]
-text = "Gender Expression"
-
-[node name="European Perspective" parent="." instance=ExtResource( 1 )]
-position = Vector2( 848, 402 )
-
-[node name="ParallaxBackground" parent="European Perspective" index="0"]
-offset = Vector2( 848, 402 )
-transform = Transform2D( 1, 0, 0, 1, 848, 402 )
-
-[node name="CanvasLayer" parent="European Perspective/ParallaxBackground/ParallaxLayer" index="0"]
-offset = Vector2( 848, 402 )
-transform = Transform2D( 1, 0, 0, 1, 848, 402 )
-
-[node name="RichTextLabel" parent="European Perspective/ParallaxBackground/ParallaxLayer/CanvasLayer/Node" index="0"]
-text = "European Perspective"
-
-[node name="We Wha" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1846, -1093 )
-
-[node name="Perpetual Drudgery\?" parent="." instance=ExtResource( 7 )]
-position = Vector2( 3304, 144 )
 
 [node name="Connections" type="Node2D" parent="."]
 
@@ -284,22 +200,22 @@ TargetExhibitPath = NodePath("../../../../European Perspective")
 
 [node name="ExhibitConnection6" parent="Connections" instance=ExtResource( 5 )]
 position = Vector2( 1232, 732 )
-points = PoolVector2Array( -140, -284, -56, 206 )
+points = PoolVector2Array( -140, -284, -53, 84 )
 startExhibitPath = NodePath("../../European Perspective")
-endExhibitPath = NodePath("../../DeSoto\'s Gendercide")
+endExhibitPath = NodePath("../../First Contact")
 
 [node name="Start" parent="Connections/ExhibitConnection6" index="0"]
 position = Vector2( -140, -284 )
 
 [node name="StartLabel" parent="Connections/ExhibitConnection6/Start" index="0"]
-bbcode_text = "[center][b]DeSoto's Gendercide[/b][/center]"
-text = "DeSoto's Gendercide"
+bbcode_text = "[center][b]First Contact[/b][/center]"
+text = "First Contact"
 
 [node name="VisitStart" parent="Connections/ExhibitConnection6/Start" index="1"]
-TargetExhibitPath = NodePath("../../../../DeSoto\'s Gendercide")
+TargetExhibitPath = NodePath("../../../../First Contact")
 
 [node name="End" parent="Connections/ExhibitConnection6" index="1"]
-position = Vector2( -56, 206 )
+position = Vector2( -53, 84 )
 
 [node name="EndLabel" parent="Connections/ExhibitConnection6/End" index="0"]
 bbcode_text = "[center][b]European Perspective[/b][/center]"
@@ -308,15 +224,156 @@ text = "European Perspective"
 [node name="VisitEnd" parent="Connections/ExhibitConnection6/End" index="1"]
 TargetExhibitPath = NodePath("../../../../European Perspective")
 
+[node name="ExhibitConnection7" parent="Connections" instance=ExtResource( 5 )]
+position = Vector2( 2215, 1076 )
+points = PoolVector2Array( -96, 34, 333, -254 )
+startExhibitPath = NodePath("../../First Contact")
+endExhibitPath = NodePath("../../Gendercide")
+
+[node name="Start" parent="Connections/ExhibitConnection7" index="0"]
+position = Vector2( -96, 34 )
+
+[node name="StartLabel" parent="Connections/ExhibitConnection7/Start" index="0"]
+bbcode_text = "[center][b]Gendercide[/b][/center]"
+text = "Gendercide"
+
+[node name="VisitStart" parent="Connections/ExhibitConnection7/Start" index="1"]
+TargetExhibitPath = NodePath("../../../../Gendercide")
+
+[node name="End" parent="Connections/ExhibitConnection7" index="1"]
+position = Vector2( 333, -254 )
+
+[node name="EndLabel" parent="Connections/ExhibitConnection7/End" index="0"]
+bbcode_text = "[center][b]First Contact[/b][/center]"
+text = "First Contact"
+
+[node name="VisitEnd" parent="Connections/ExhibitConnection7/End" index="1"]
+TargetExhibitPath = NodePath("../../../../First Contact")
+
+[node name="ExhibitConnection8" parent="Connections" instance=ExtResource( 5 )]
+position = Vector2( 2290, 1514 )
+points = PoolVector2Array( -171, -262, -146, 33 )
+startExhibitPath = NodePath("../../First Contact")
+endExhibitPath = NodePath("../../Lady of Cofitachequi")
+
+[node name="Start" parent="Connections/ExhibitConnection8" index="0"]
+position = Vector2( -171, -262 )
+
+[node name="StartLabel" parent="Connections/ExhibitConnection8/Start" index="0"]
+bbcode_text = "[center][b]Lady of Cofitachequi[/b][/center]"
+text = "Lady of Cofitachequi"
+
+[node name="VisitStart" parent="Connections/ExhibitConnection8/Start" index="1"]
+TargetExhibitPath = NodePath("../../../../Lady of Cofitachequi")
+
+[node name="End" parent="Connections/ExhibitConnection8" index="1"]
+position = Vector2( -146, 33 )
+
+[node name="EndLabel" parent="Connections/ExhibitConnection8/End" index="0"]
+bbcode_text = "[center][b]First Contact[/b][/center]"
+text = "First Contact"
+
+[node name="VisitEnd" parent="Connections/ExhibitConnection8/End" index="1"]
+TargetExhibitPath = NodePath("../../../../First Contact")
+
+[node name="Native American Gender and Colonialism in 1800s" parent="." instance=ExtResource( 1 )]
+position = Vector2( 4, -10 )
+canvasLayerPaths = [ NodePath("ParallaxBackground/ParallaxLayer/CanvasLayer"), NodePath("CanvasLayer") ]
+
+[node name="ParallaxBackground" parent="Native American Gender and Colonialism in 1800s" index="0"]
+offset = Vector2( 4, -10 )
+transform = Transform2D( 1, 0, 0, 1, 4, -10 )
+
+[node name="CanvasLayer" parent="Native American Gender and Colonialism in 1800s/ParallaxBackground/ParallaxLayer" index="0"]
+layer = 10
+offset = Vector2( 4, -10 )
+transform = Transform2D( 1, 0, 0, 1, 4, -10 )
+
+[node name="Node" parent="Native American Gender and Colonialism in 1800s/ParallaxBackground/ParallaxLayer/CanvasLayer" index="0"]
+margin_top = -267.0
+margin_bottom = 33.0
+
+[node name="RichTextLabel" parent="Native American Gender and Colonialism in 1800s/ParallaxBackground/ParallaxLayer/CanvasLayer/Node" index="0"]
+margin_top = 53.0
+margin_bottom = 122.0
+text = "Native American Gender and Colonialism in 1800s"
+autowrap = true
+
+[node name="Label" type="Label" parent="Native American Gender and Colonialism in 1800s/ParallaxBackground/ParallaxLayer/CanvasLayer/Node" index="1"]
+margin_top = 126.0
+margin_right = 300.0
+margin_bottom = 246.0
+text = "By Alan Tong
+
+Culture of History Now
+RU:358:275
+Professor Eagan Dean"
+align = 1
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Native American Gender and Colonialism in 1800s"]
+layer = -1
+offset = Vector2( 4, -10 )
+transform = Transform2D( 1, 0, 0, 1, 4, -10 )
+follow_viewport_enable = true
+follow_viewport_scale = 0.8
+
+[node name="TextureRect" type="TextureRect" parent="Native American Gender and Colonialism in 1800s/CanvasLayer"]
+margin_left = -151.0
+margin_top = 44.0
+margin_right = 149.0
+margin_bottom = 344.0
+rect_min_size = Vector2( 0, 300 )
+mouse_filter = 2
+texture = ExtResource( 10 )
+expand = true
+stretch_mode = 5
+
+[node name="Gender Expression" parent="." instance=ExtResource( 1 )]
+position = Vector2( 881, -478 )
+
+[node name="ParallaxBackground" parent="Gender Expression" index="0"]
+offset = Vector2( 881, -478 )
+transform = Transform2D( 1, 0, 0, 1, 881, -478 )
+
+[node name="CanvasLayer" parent="Gender Expression/ParallaxBackground/ParallaxLayer" index="0"]
+offset = Vector2( 881, -478 )
+transform = Transform2D( 1, 0, 0, 1, 881, -478 )
+
+[node name="RichTextLabel" parent="Gender Expression/ParallaxBackground/ParallaxLayer/CanvasLayer/Node" index="0"]
+text = "Gender Expression"
+
+[node name="European Perspective" parent="." instance=ExtResource( 1 )]
+position = Vector2( 848, 402 )
+
+[node name="ParallaxBackground" parent="European Perspective" index="0"]
+offset = Vector2( 848, 402 )
+transform = Transform2D( 1, 0, 0, 1, 848, 402 )
+
+[node name="CanvasLayer" parent="European Perspective/ParallaxBackground/ParallaxLayer" index="0"]
+offset = Vector2( 848, 402 )
+transform = Transform2D( 1, 0, 0, 1, 848, 402 )
+
+[node name="RichTextLabel" parent="European Perspective/ParallaxBackground/ParallaxLayer/CanvasLayer/Node" index="0"]
+text = "European Perspective"
+
+[node name="We Wha" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1846, -1093 )
+
+[node name="Perpetual Drudgery\?" parent="." instance=ExtResource( 7 )]
+position = Vector2( 3304, 144 )
+
 [node name="Summer on the Lakes" parent="." instance=ExtResource( 6 )]
 position = Vector2( 1831, -176 )
 
-[node name="DeSoto\'s Gendercide" parent="." instance=ExtResource( 14 )]
-position = Vector2( 1651, 1141 )
+[node name="Gendercide" parent="." instance=ExtResource( 14 )]
+position = Vector2( 3001, 1032 )
 
-[editable path="Native American Gender and Colonialism in 1800s"]
-[editable path="Gender Expression"]
-[editable path="European Perspective"]
+[node name="Lady of Cofitachequi" parent="." instance=ExtResource( 15 )]
+position = Vector2( 2473, 1928 )
+
+[node name="First Contact" parent="." instance=ExtResource( 16 )]
+position = Vector2( 1660, 1021 )
+
 [editable path="Connections/ExhibitConnection"]
 [editable path="Connections/ExhibitConnection/Start/VisitStart"]
 [editable path="Connections/ExhibitConnection/End/VisitEnd"]
@@ -335,3 +392,12 @@ position = Vector2( 1651, 1141 )
 [editable path="Connections/ExhibitConnection6"]
 [editable path="Connections/ExhibitConnection6/Start/VisitStart"]
 [editable path="Connections/ExhibitConnection6/End/VisitEnd"]
+[editable path="Connections/ExhibitConnection7"]
+[editable path="Connections/ExhibitConnection7/Start/VisitStart"]
+[editable path="Connections/ExhibitConnection7/End/VisitEnd"]
+[editable path="Connections/ExhibitConnection8"]
+[editable path="Connections/ExhibitConnection8/Start/VisitStart"]
+[editable path="Connections/ExhibitConnection8/End/VisitEnd"]
+[editable path="Native American Gender and Colonialism in 1800s"]
+[editable path="Gender Expression"]
+[editable path="European Perspective"]

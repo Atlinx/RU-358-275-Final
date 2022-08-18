@@ -1,0 +1,101 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Fonts/urbanist-title.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Art/DeSoto.jpg" type="Texture" id=2]
+[ext_resource path="res://Art/Vasco.jpg" type="Texture" id=3]
+[ext_resource path="res://Prefabs/Exhibit.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Fonts/theme.tres" type="Theme" id=5]
+
+[node name="First Contact" instance=ExtResource( 4 )]
+canvasLayerPaths = [ NodePath("ParallaxBackground/CanvasLayer") ]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="ParallaxBackground" index="0"]
+follow_viewport_enable = true
+
+[node name="Control" type="Control" parent="ParallaxBackground/CanvasLayer" index="0"]
+margin_left = 140.0
+margin_top = 62.0
+margin_right = 180.0
+margin_bottom = 102.0
+
+[node name="Node" type="VBoxContainer" parent="ParallaxBackground/CanvasLayer/Control" index="0"]
+margin_left = -507.0
+margin_top = -345.0
+margin_right = 203.0
+margin_bottom = 263.0
+theme = ExtResource( 5 )
+custom_constants/separation = 24
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ParallaxBackground/CanvasLayer/Control/Node" index="0"]
+margin_right = 710.0
+margin_bottom = 188.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="ParallaxBackground/CanvasLayer/Control/Node/VBoxContainer" index="0"]
+margin_right = 710.0
+margin_bottom = 37.0
+custom_fonts/font = ExtResource( 1 )
+text = "First Contact"
+align = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ParallaxBackground/CanvasLayer/Control/Node/VBoxContainer" index="1"]
+margin_top = 41.0
+margin_right = 710.0
+margin_bottom = 188.0
+mouse_filter = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+bbcode_text = "The first contact Native Americans had with Europeans came in the form of explorers. One such group is the conquistadors of Spain, who travelled into parts of South and North America in search of treasure and land to claim.
+
+The ones relevant to us are Vasco Núñez de Balboa, and Hernando de Soto. The following nodes look at their encounters with natives both in South and North America, understanding how Europeans \"gendered\" Indigenous peoples."
+text = "The first contact Native Americans had with Europeans came in the form of explorers. One such group is the conquistadors of Spain, who travelled into parts of South and North America in search of treasure and land to claim.
+
+The ones relevant to us are Vasco Núñez de Balboa, and Hernando de Soto. The following nodes look at their encounters with natives both in South and North America, understanding how Europeans \"gendered\" Indigenous peoples."
+fit_content_height = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ParallaxBackground/CanvasLayer/Control/Node" index="1"]
+margin_top = 212.0
+margin_right = 710.0
+margin_bottom = 612.0
+rect_min_size = Vector2( 0, 400 )
+custom_constants/separation = 8
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="ParallaxBackground/CanvasLayer/Control/Node/HBoxContainer" index="0"]
+margin_right = 351.0
+margin_bottom = 400.0
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground/CanvasLayer/Control/Node/HBoxContainer/VBoxContainer2" index="0"]
+margin_right = 351.0
+margin_bottom = 368.0
+size_flags_vertical = 3
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 7
+
+[node name="Label" type="Label" parent="ParallaxBackground/CanvasLayer/Control/Node/HBoxContainer/VBoxContainer2" index="1"]
+margin_top = 372.0
+margin_right = 351.0
+margin_bottom = 400.0
+text = "Vasco Núñez de Balboa"
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="ParallaxBackground/CanvasLayer/Control/Node/HBoxContainer" index="1"]
+margin_left = 359.0
+margin_right = 710.0
+margin_bottom = 400.0
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground/CanvasLayer/Control/Node/HBoxContainer/VBoxContainer3" index="0"]
+modulate = Color( 0.670588, 0.670588, 0.670588, 1 )
+margin_right = 351.0
+margin_bottom = 368.0
+size_flags_vertical = 3
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 7
+
+[node name="Label" type="Label" parent="ParallaxBackground/CanvasLayer/Control/Node/HBoxContainer/VBoxContainer3" index="1"]
+margin_top = 372.0
+margin_right = 351.0
+margin_bottom = 400.0
+text = "Hernando de Soto"

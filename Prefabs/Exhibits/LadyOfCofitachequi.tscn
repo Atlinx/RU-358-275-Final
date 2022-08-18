@@ -1,0 +1,91 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Prefabs/Exhibit.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Fonts/theme.tres" type="Theme" id=2]
+[ext_resource path="res://Fonts/urbanist-title.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Art/LadyOfCofitachequi.jpg" type="Texture" id=4]
+
+[node name="Lady of Cofitachequi" instance=ExtResource( 1 )]
+canvasLayerPaths = [ NodePath("ParallaxBackground/CanvasLayer") ]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="ParallaxBackground" index="0"]
+follow_viewport_enable = true
+
+[node name="Control" type="Control" parent="ParallaxBackground/CanvasLayer" index="0"]
+margin_left = 140.0
+margin_top = 62.0
+margin_right = 180.0
+margin_bottom = 102.0
+
+[node name="Node" type="HBoxContainer" parent="ParallaxBackground/CanvasLayer/Control" index="0"]
+margin_left = -507.0
+margin_top = -345.0
+margin_right = 293.0
+margin_bottom = 263.0
+rect_min_size = Vector2( 1500, 300 )
+theme = ExtResource( 2 )
+custom_constants/separation = 24
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ParallaxBackground/CanvasLayer/Control/Node" index="0"]
+margin_right = 738.0
+margin_bottom = 818.0
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="ParallaxBackground/CanvasLayer/Control/Node/VBoxContainer" index="0"]
+margin_right = 738.0
+margin_bottom = 37.0
+custom_fonts/font = ExtResource( 3 )
+text = "The Lady of Cofitachequi"
+align = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ParallaxBackground/CanvasLayer/Control/Node/VBoxContainer" index="1"]
+margin_top = 41.0
+margin_right = 738.0
+margin_bottom = 818.0
+mouse_filter = 2
+size_flags_vertical = 3
+bbcode_enabled = true
+bbcode_text = "On DeSoto's journey to South Carolina, he encountered the Coftachequi, a chiefdom located in South Carolina. Their leader, or cacica, was a woman, and was captured by the conquistadors to use as a guide. But within colonial accounts of this encounter, they providing contradictory retellings.
+
+One record highlighted her generosity and goodwill towards the conquistadors. It said \"she always asked the general’s pardon for being unable to do as much as she wished for them, which so aficted and depressed her that the Spaniards themselves had to console her. By these manifestations of a generous spirit and others that she showed toward her vassals, according to what they themselves said publicly, she showed herself to be a woman truly worthy of the states she possessed and of other greater ones, and undeserving of being left in her heathenism\" (qtd. in Driskill 57)
+
+\"Along that way, the cacica of Cutifachiqui ... stepped aside from the road and went into a wood saying that she had to attend to her necessities. Thus she deceived them and hid herself in the woods... She took with her a box of canes made like a cofer... flled with unbored pearls. Some who had most knowledge of them said they were very valuable. An Indian woman was carrying them for her whom she took with her... She took it and went to stop at Xualla with three slaves who had escaped from the camp. [The horseman and slaves guarding the cacica] related how the cacica had remained in Xualla with a slave of André de Vasconcellos who refused to come with them, and it was very certain that they held communication as husband and wife, and that both had made up their minds to go to Cutifachiqui\" (qtd. in Driskill 60).
+
+Within the first record, the cacica is depicted as generous and submissive to the point of patronizing, with her inability to help having  \"despressed [to the point] that the Spaniards themselves had to console her.\" But what could the sadness actually have meant? She could have been \"depressed\" after seeing the atrocities and destruction left by  the conquistadors. 
+
+And for the second depiction, she's depicted as shrewd, having the knowledge to steal the jewlery and escape from the conquistadors. Her act of convincing a slave to join her is used to paint her femininity in a negative light. That is, the chronicler beliefs she's used her body as a woman to \"lure his slaves to freedom through sexual transgression.\" (Driskill 61).
+
+But ultimately, both depictions are the result of a gendering Indigenous people for colonialization. That is, \"through tropes of colonial patriarchal gender that Indigenous bodies and na- tions are constructed as either feminine (even in male bodies) and thus willing to accede power to colonial control, or masculine (even in female bodies) and thus a danger to colonial desires and in need of colonial conquest.\" (Driskill 67). And so the Lady of Coftachequi, like so many others, is either submissive or resistive in the eyes of the colonizers."
+text = "On DeSoto's journey to South Carolina, he encountered the Coftachequi, a chiefdom located in South Carolina. Their leader, or cacica, was a woman, and was captured by the conquistadors to use as a guide. But within colonial accounts of this encounter, they providing contradictory retellings.
+
+One record highlighted her generosity and goodwill towards the conquistadors. It said \"she always asked the general’s pardon for being unable to do as much as she wished for them, which so aficted and depressed her that the Spaniards themselves had to console her. By these manifestations of a generous spirit and others that she showed toward her vassals, according to what they themselves said publicly, she showed herself to be a woman truly worthy of the states she possessed and of other greater ones, and undeserving of being left in her heathenism\" (qtd. in Driskill 57)
+
+\"Along that way, the cacica of Cutifachiqui ... stepped aside from the road and went into a wood saying that she had to attend to her necessities. Thus she deceived them and hid herself in the woods... She took with her a box of canes made like a cofer... flled with unbored pearls. Some who had most knowledge of them said they were very valuable. An Indian woman was carrying them for her whom she took with her... She took it and went to stop at Xualla with three slaves who had escaped from the camp. [The horseman and slaves guarding the cacica] related how the cacica had remained in Xualla with a slave of André de Vasconcellos who refused to come with them, and it was very certain that they held communication as husband and wife, and that both had made up their minds to go to Cutifachiqui\" (qtd. in Driskill 60).
+
+Within the first record, the cacica is depicted as generous and submissive to the point of patronizing, with her inability to help having  \"despressed [to the point] that the Spaniards themselves had to console her.\" But what could the sadness actually have meant? She could have been \"depressed\" after seeing the atrocities and destruction left by  the conquistadors. 
+
+And for the second depiction, she's depicted as shrewd, having the knowledge to steal the jewlery and escape from the conquistadors. Her act of convincing a slave to join her is used to paint her femininity in a negative light. That is, the chronicler beliefs she's used her body as a woman to \"lure his slaves to freedom through sexual transgression.\" (Driskill 61).
+
+But ultimately, both depictions are the result of a gendering Indigenous people for colonialization. That is, \"through tropes of colonial patriarchal gender that Indigenous bodies and na- tions are constructed as either feminine (even in male bodies) and thus willing to accede power to colonial control, or masculine (even in female bodies) and thus a danger to colonial desires and in need of colonial conquest.\" (Driskill 67). And so the Lady of Coftachequi, like so many others, is either submissive or resistive in the eyes of the colonizers."
+fit_content_height = true
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="ParallaxBackground/CanvasLayer/Control/Node" index="1"]
+margin_left = 762.0
+margin_right = 1500.0
+margin_bottom = 818.0
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground/CanvasLayer/Control/Node/VBoxContainer2" index="0"]
+margin_right = 738.0
+margin_bottom = 786.0
+size_flags_vertical = 3
+texture = ExtResource( 4 )
+expand = true
+stretch_mode = 7
+
+[node name="Label" type="Label" parent="ParallaxBackground/CanvasLayer/Control/Node/VBoxContainer2" index="1"]
+margin_top = 790.0
+margin_right = 738.0
+margin_bottom = 818.0
+text = "The Lady of Cofitachequi Gives De Soto The Town's \"Treasure\""
+autowrap = true
