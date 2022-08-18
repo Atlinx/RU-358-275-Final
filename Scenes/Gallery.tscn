@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Prefabs/Topic.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Prefabs/Camera.tscn" type="PackedScene" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://Scripts/VisitExhibitUIButton.cs" type="Script" id=11]
 [ext_resource path="res://Art/Anchor.png" type="Texture" id=12]
 [ext_resource path="res://Art/ExternalLink.png" type="Texture" id=13]
+[ext_resource path="res://Prefabs/Exhibits/DeSotosGendercide.tscn" type="PackedScene" id=14]
 
 [node name="Gallery" type="Node2D"]
 script = ExtResource( 3 )
@@ -257,12 +258,12 @@ TargetExhibitPath = NodePath("../../../../Native American Gender and Colonialism
 
 [node name="ExhibitConnection2" parent="Connections" instance=ExtResource( 5 )]
 position = Vector2( 1411, 610 )
-points = PoolVector2Array( -335, -190, 24, -812 )
+points = PoolVector2Array( -318, -316, 24, -812 )
 startExhibitPath = NodePath("../../European Perspective")
 endExhibitPath = NodePath("../../Summer on the Lakes")
 
 [node name="Start" parent="Connections/ExhibitConnection2" index="0"]
-position = Vector2( -335, -190 )
+position = Vector2( -318, -316 )
 
 [node name="StartLabel" parent="Connections/ExhibitConnection2/Start" index="0"]
 bbcode_text = "[center][b]Summer on the Lakes[/b][/center]"
@@ -281,8 +282,37 @@ text = "European Perspective"
 [node name="VisitEnd" parent="Connections/ExhibitConnection2/End" index="1"]
 TargetExhibitPath = NodePath("../../../../European Perspective")
 
+[node name="ExhibitConnection6" parent="Connections" instance=ExtResource( 5 )]
+position = Vector2( 1232, 732 )
+points = PoolVector2Array( -140, -284, -56, 206 )
+startExhibitPath = NodePath("../../European Perspective")
+endExhibitPath = NodePath("../../DeSoto\'s Gendercide")
+
+[node name="Start" parent="Connections/ExhibitConnection6" index="0"]
+position = Vector2( -140, -284 )
+
+[node name="StartLabel" parent="Connections/ExhibitConnection6/Start" index="0"]
+bbcode_text = "[center][b]DeSoto's Gendercide[/b][/center]"
+text = "DeSoto's Gendercide"
+
+[node name="VisitStart" parent="Connections/ExhibitConnection6/Start" index="1"]
+TargetExhibitPath = NodePath("../../../../DeSoto\'s Gendercide")
+
+[node name="End" parent="Connections/ExhibitConnection6" index="1"]
+position = Vector2( -56, 206 )
+
+[node name="EndLabel" parent="Connections/ExhibitConnection6/End" index="0"]
+bbcode_text = "[center][b]European Perspective[/b][/center]"
+text = "European Perspective"
+
+[node name="VisitEnd" parent="Connections/ExhibitConnection6/End" index="1"]
+TargetExhibitPath = NodePath("../../../../European Perspective")
+
 [node name="Summer on the Lakes" parent="." instance=ExtResource( 6 )]
 position = Vector2( 1831, -176 )
+
+[node name="DeSoto\'s Gendercide" parent="." instance=ExtResource( 14 )]
+position = Vector2( 1651, 1141 )
 
 [editable path="Native American Gender and Colonialism in 1800s"]
 [editable path="Gender Expression"]
@@ -302,3 +332,6 @@ position = Vector2( 1831, -176 )
 [editable path="Connections/ExhibitConnection2"]
 [editable path="Connections/ExhibitConnection2/Start/VisitStart"]
 [editable path="Connections/ExhibitConnection2/End/VisitEnd"]
+[editable path="Connections/ExhibitConnection6"]
+[editable path="Connections/ExhibitConnection6/Start/VisitStart"]
+[editable path="Connections/ExhibitConnection6/End/VisitEnd"]
